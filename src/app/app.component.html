@@ -1,0 +1,24 @@
+<div class="container">
+<header>
+    <h1>NGXS Angular App</h1>
+</header>
+
+
+@defer(when isLoaded){
+<div class="create-container">
+    <app-create></app-create>
+</div>
+<div class="posts-container">
+    <app-posts></app-posts>
+</div>
+}
+@loading {
+    <p>Loading...</p>
+}
+@placeholder{
+    <p>This is an app built with Angular 17 &amp; NGXS</p>
+}
+@error{
+    <p>Error loading the content</p>
+}
+</div>

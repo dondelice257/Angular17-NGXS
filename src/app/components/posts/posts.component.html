@@ -1,0 +1,8 @@
+<div class="posts-wrapper">
+    <div *ngFor='let post of posts$ | async; trackBy: trackPostById'>
+        <p>{{post.title}}</p>
+        <p>{{post.description}}</p>
+
+        <button class="remove" (click)="remove(post.id)">Remove post</button>
+    </div>
+</div>
